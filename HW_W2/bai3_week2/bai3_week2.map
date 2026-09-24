@@ -1,0 +1,362 @@
+
+Discarded input sections
+
+ .group         0x00000000        0xc adc.o
+ .group         0x00000000        0xc adc.o
+ .group         0x00000000        0xc adc.o
+ .group         0x00000000        0xc adc.o
+ .group         0x00000000        0xc adc.o
+ .group         0x00000000        0xc adc.o
+ .group         0x00000000        0xc adc.o
+ .group         0x00000000        0xc adc.o
+ .group         0x00000000        0xc adc.o
+ .group         0x00000000        0xc adc.o
+ .text          0x00000000        0x0 adc.o
+ .data          0x00000000        0x0 adc.o
+ .bss           0x00000000        0x0 adc.o
+ .group         0x00000000        0xc delay.o
+ .text          0x00000000        0x0 delay.o
+ .data          0x00000000        0x0 delay.o
+ .bss           0x00000000        0x0 delay.o
+ .debug_macro   0x00000000      0xac6 delay.o
+ .group         0x00000000        0xc main.o
+ .group         0x00000000        0xc main.o
+ .group         0x00000000        0xc main.o
+ .group         0x00000000        0xc main.o
+ .group         0x00000000        0xc main.o
+ .group         0x00000000        0xc main.o
+ .group         0x00000000        0xc main.o
+ .group         0x00000000        0xc main.o
+ .group         0x00000000        0xc main.o
+ .group         0x00000000        0xc main.o
+ .text          0x00000000        0x0 main.o
+ .data          0x00000000        0x0 main.o
+ .bss           0x00000000        0x0 main.o
+ .debug_macro   0x00000000      0xac6 main.o
+ .debug_macro   0x00000000       0x2e main.o
+ .debug_macro   0x00000000       0x22 main.o
+ .debug_macro   0x00000000      0x34e main.o
+ .debug_macro   0x00000000       0x1c main.o
+ .debug_macro   0x00000000       0x22 main.o
+ .debug_macro   0x00000000       0xbd main.o
+ .debug_macro   0x00000000      0xd23 main.o
+ .debug_macro   0x00000000     0xe09e main.o
+ .debug_macro   0x00000000       0x6d main.o
+ .group         0x00000000        0xc uart.o
+ .group         0x00000000        0xc uart.o
+ .group         0x00000000        0xc uart.o
+ .group         0x00000000        0xc uart.o
+ .group         0x00000000        0xc uart.o
+ .group         0x00000000        0xc uart.o
+ .group         0x00000000        0xc uart.o
+ .group         0x00000000        0xc uart.o
+ .group         0x00000000        0xc uart.o
+ .group         0x00000000        0xc uart.o
+ .text          0x00000000        0x0 uart.o
+ .data          0x00000000        0x0 uart.o
+ .bss           0x00000000        0x0 uart.o
+ .debug_macro   0x00000000      0xac6 uart.o
+ .debug_macro   0x00000000       0x2e uart.o
+ .debug_macro   0x00000000       0x22 uart.o
+ .debug_macro   0x00000000      0x34e uart.o
+ .debug_macro   0x00000000       0x1c uart.o
+ .debug_macro   0x00000000       0x22 uart.o
+ .debug_macro   0x00000000       0xbd uart.o
+ .debug_macro   0x00000000      0xd23 uart.o
+ .debug_macro   0x00000000     0xe09e uart.o
+ .debug_macro   0x00000000       0x6d uart.o
+ .group         0x00000000        0xc clock.o
+ .group         0x00000000        0xc clock.o
+ .group         0x00000000        0xc clock.o
+ .group         0x00000000        0xc clock.o
+ .group         0x00000000        0xc clock.o
+ .group         0x00000000        0xc clock.o
+ .group         0x00000000        0xc clock.o
+ .group         0x00000000        0xc clock.o
+ .group         0x00000000        0xc clock.o
+ .group         0x00000000        0xc clock.o
+ .text          0x00000000        0x0 clock.o
+ .data          0x00000000        0x0 clock.o
+ .bss           0x00000000        0x0 clock.o
+ .text.Clock_Init_72MHz
+                0x00000000       0xf8 clock.o
+ .debug_info    0x00000000      0x19c clock.o
+ .debug_abbrev  0x00000000       0xa3 clock.o
+ .debug_aranges
+                0x00000000       0x20 clock.o
+ .debug_rnglists
+                0x00000000       0x14 clock.o
+ .debug_macro   0x00000000       0x7d clock.o
+ .debug_macro   0x00000000      0xac6 clock.o
+ .debug_macro   0x00000000       0x2e clock.o
+ .debug_macro   0x00000000       0x22 clock.o
+ .debug_macro   0x00000000      0x34e clock.o
+ .debug_macro   0x00000000       0x1c clock.o
+ .debug_macro   0x00000000       0x22 clock.o
+ .debug_macro   0x00000000       0xbd clock.o
+ .debug_macro   0x00000000      0xd23 clock.o
+ .debug_macro   0x00000000     0xe09e clock.o
+ .debug_macro   0x00000000       0x6d clock.o
+ .debug_line    0x00000000      0x22a clock.o
+ .debug_str     0x00000000    0x54266 clock.o
+ .comment       0x00000000       0x27 clock.o
+ .debug_frame   0x00000000       0x30 clock.o
+ .ARM.attributes
+                0x00000000       0x2d clock.o
+ .text          0x00000000        0x0 startup.o
+ .data          0x00000000        0x0 startup.o
+ .bss           0x00000000        0x0 startup.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x08000000         0x00010000         xr
+RAM              0x20000000         0x00005000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD adc.o
+LOAD delay.o
+LOAD main.o
+LOAD uart.o
+LOAD clock.o
+LOAD startup.o
+                0x20005000                        _estack = (ORIGIN (RAM) + LENGTH (RAM))
+
+.isr_vector     0x08000000       0xec
+                0x08000000                        . = ALIGN (0x4)
+ *(.isr_vector)
+ .isr_vector    0x08000000       0xec startup.o
+                0x080000ec                        . = ALIGN (0x4)
+
+.text           0x080000ec      0x3dc
+                0x080000ec                        . = ALIGN (0x4)
+ *(.text)
+ *(.text*)
+ .text.adc1_init
+                0x080000ec       0x58 adc.o
+                0x080000ec                adc1_init
+ .text.adc1_read
+                0x08000144       0x30 adc.o
+                0x08000144                adc1_read
+ .text.delay_ms
+                0x08000174       0x34 delay.o
+                0x08000174                delay_ms
+ .text.main     0x080001a8      0x128 main.o
+                0x080001a8                main
+ .text.usart1_init
+                0x080002d0       0x2c uart.o
+                0x080002d0                usart1_init
+ .text.usart1_sendChar
+                0x080002fc       0x2c uart.o
+                0x080002fc                usart1_sendChar
+ .text.usart1_sendStr
+                0x08000328       0x2a uart.o
+                0x08000328                usart1_sendStr
+ *fill*         0x08000352        0x2 
+ .text.usart1_sendInt
+                0x08000354       0x8c uart.o
+                0x08000354                usart1_sendInt
+ .text.usart1_sendVolt
+                0x080003e0       0x80 uart.o
+                0x080003e0                usart1_sendVolt
+ .text.Reset_Handler
+                0x08000460       0x40 startup.o
+                0x08000460                Reset_Handler
+ .text.Default_Handler
+                0x080004a0        0x4 startup.o
+                0x080004a0                EXTI2_IRQHandler
+                0x080004a0                DebugMon_Handler
+                0x080004a0                TIM1_CC_IRQHandler
+                0x080004a0                HardFault_Handler
+                0x080004a0                SysTick_Handler
+                0x080004a0                PVD_IRQHandler
+                0x080004a0                PendSV_Handler
+                0x080004a0                NMI_Handler
+                0x080004a0                EXTI3_IRQHandler
+                0x080004a0                EXTI0_IRQHandler
+                0x080004a0                I2C2_EV_IRQHandler
+                0x080004a0                UsageFault_Handler
+                0x080004a0                ADC1_2_IRQHandler
+                0x080004a0                SPI1_IRQHandler
+                0x080004a0                TAMPER_IRQHandler
+                0x080004a0                DMA1_Channel4_IRQHandler
+                0x080004a0                USART3_IRQHandler
+                0x080004a0                RTC_IRQHandler
+                0x080004a0                DMA1_Channel7_IRQHandler
+                0x080004a0                CAN1_RX1_IRQHandler
+                0x080004a0                TIM4_IRQHandler
+                0x080004a0                I2C1_EV_IRQHandler
+                0x080004a0                DMA1_Channel6_IRQHandler
+                0x080004a0                TIM3_IRQHandler
+                0x080004a0                RCC_IRQHandler
+                0x080004a0                TIM1_TRG_COM_IRQHandler
+                0x080004a0                DMA1_Channel1_IRQHandler
+                0x080004a0                Default_Handler
+                0x080004a0                EXTI15_10_IRQHandler
+                0x080004a0                EXTI9_5_IRQHandler
+                0x080004a0                SPI2_IRQHandler
+                0x080004a0                MemManage_Handler
+                0x080004a0                SVC_Handler
+                0x080004a0                DMA1_Channel5_IRQHandler
+                0x080004a0                EXTI4_IRQHandler
+                0x080004a0                USB_LP_CAN1_RX0_IRQHandler
+                0x080004a0                USB_HP_CAN1_TX_IRQHandler
+                0x080004a0                DMA1_Channel3_IRQHandler
+                0x080004a0                TIM1_UP_IRQHandler
+                0x080004a0                WWDG_IRQHandler
+                0x080004a0                TIM2_IRQHandler
+                0x080004a0                TIM1_BRK_IRQHandler
+                0x080004a0                EXTI1_IRQHandler
+                0x080004a0                RTCAlarm_IRQHandler
+                0x080004a0                USART2_IRQHandler
+                0x080004a0                I2C2_ER_IRQHandler
+                0x080004a0                DMA1_Channel2_IRQHandler
+                0x080004a0                CAN1_SCE_IRQHandler
+                0x080004a0                FLASH_IRQHandler
+                0x080004a0                BusFault_Handler
+                0x080004a0                USART1_IRQHandler
+                0x080004a0                I2C1_ER_IRQHandler
+                0x080004a0                USBWakeUp_IRQHandler
+ *(.rodata)
+ .rodata        0x080004a4       0x21 main.o
+ *(.rodata*)
+                0x080004c8                        . = ALIGN (0x4)
+ *fill*         0x080004c5        0x3 
+                0x080004c8                        _etext = .
+                0x080004c8                        _sidata = LOADADDR (.data)
+
+.glue_7         0x080004c8        0x0
+ .glue_7        0x080004c8        0x0 linker stubs
+
+.glue_7t        0x080004c8        0x0
+ .glue_7t       0x080004c8        0x0 linker stubs
+
+.vfp11_veneer   0x080004c8        0x0
+ .vfp11_veneer  0x080004c8        0x0 linker stubs
+
+.v4_bx          0x080004c8        0x0
+ .v4_bx         0x080004c8        0x0 linker stubs
+
+.iplt           0x080004c8        0x0
+ .iplt          0x080004c8        0x0 main.o
+
+.rel.dyn        0x080004c8        0x0
+ .rel.iplt      0x080004c8        0x0 main.o
+
+.data           0x20000000        0x0 load address 0x080004c8
+                0x20000000                        . = ALIGN (0x4)
+                0x20000000                        _sdata = .
+ *(.data)
+ *(.data*)
+                0x20000000                        . = ALIGN (0x4)
+                0x20000000                        _edata = .
+
+.igot.plt       0x20000000        0x0 load address 0x080004c8
+ .igot.plt      0x20000000        0x0 main.o
+
+.bss            0x20000000        0x0 load address 0x080004c8
+                0x20000000                        . = ALIGN (0x4)
+                0x20000000                        _sbss = .
+ *(.bss)
+ *(.bss*)
+ *(COMMON)
+                0x20000000                        . = ALIGN (0x4)
+                0x20000000                        _ebss = .
+OUTPUT(bai3_week2.elf elf32-littlearm)
+LOAD linker stubs
+
+.debug_info     0x00000000      0x67b
+ .debug_info    0x00000000      0x19a adc.o
+ .debug_info    0x0000019a       0x69 delay.o
+ .debug_info    0x00000203      0x25a main.o
+ .debug_info    0x0000045d      0x21e uart.o
+
+.debug_abbrev   0x00000000      0x346
+ .debug_abbrev  0x00000000       0xab adc.o
+ .debug_abbrev  0x000000ab       0x65 delay.o
+ .debug_abbrev  0x00000110      0x11b main.o
+ .debug_abbrev  0x0000022b      0x11b uart.o
+
+.debug_aranges  0x00000000       0xa8
+ .debug_aranges
+                0x00000000       0x28 adc.o
+ .debug_aranges
+                0x00000028       0x20 delay.o
+ .debug_aranges
+                0x00000048       0x20 main.o
+ .debug_aranges
+                0x00000068       0x40 uart.o
+
+.debug_rnglists
+                0x00000000       0x6d
+ .debug_rnglists
+                0x00000000       0x19 adc.o
+ .debug_rnglists
+                0x00000019       0x13 delay.o
+ .debug_rnglists
+                0x0000002c       0x14 main.o
+ .debug_rnglists
+                0x00000040       0x2d uart.o
+
+.debug_macro    0x00000000     0xff33
+ .debug_macro   0x00000000       0x7d adc.o
+ .debug_macro   0x0000007d      0xac6 adc.o
+ .debug_macro   0x00000b43       0x2e adc.o
+ .debug_macro   0x00000b71       0x22 adc.o
+ .debug_macro   0x00000b93      0x34e adc.o
+ .debug_macro   0x00000ee1       0x1c adc.o
+ .debug_macro   0x00000efd       0x22 adc.o
+ .debug_macro   0x00000f1f       0xbd adc.o
+ .debug_macro   0x00000fdc      0xd23 adc.o
+ .debug_macro   0x00001cff     0xe09e adc.o
+ .debug_macro   0x0000fd9d       0x6d adc.o
+ .debug_macro   0x0000fe0a       0x1b delay.o
+ .debug_macro   0x0000fe25       0x91 main.o
+ .debug_macro   0x0000feb6       0x7d uart.o
+
+.debug_line     0x00000000      0x680
+ .debug_line    0x00000000      0x1e8 adc.o
+ .debug_line    0x000001e8       0x62 delay.o
+ .debug_line    0x0000024a      0x1eb main.o
+ .debug_line    0x00000435      0x24b uart.o
+
+.debug_str      0x00000000    0x5410e
+ .debug_str     0x00000000    0x5410e adc.o
+                              0x5423d (size before relaxing)
+ .debug_str     0x0005410e        0x0 delay.o
+                               0x2e1f (size before relaxing)
+ .debug_str     0x0005410e        0x0 main.o
+                              0x542a4 (size before relaxing)
+ .debug_str     0x0005410e        0x0 uart.o
+                              0x5424c (size before relaxing)
+
+.comment        0x00000000       0x26
+ .comment       0x00000000       0x26 adc.o
+                                 0x27 (size before relaxing)
+ .comment       0x00000026        0x0 delay.o
+                                 0x27 (size before relaxing)
+ .comment       0x00000026        0x0 main.o
+                                 0x27 (size before relaxing)
+ .comment       0x00000026        0x0 uart.o
+                                 0x27 (size before relaxing)
+
+.ARM.attributes
+                0x00000000       0x2b
+ .ARM.attributes
+                0x00000000       0x2d adc.o
+ .ARM.attributes
+                0x0000002d       0x2d delay.o
+ .ARM.attributes
+                0x0000005a       0x2d main.o
+ .ARM.attributes
+                0x00000087       0x2d uart.o
+ .ARM.attributes
+                0x000000b4       0x21 startup.o
+
+.debug_frame    0x00000000      0x17c
+ .debug_frame   0x00000000       0x50 adc.o
+ .debug_frame   0x00000050       0x38 delay.o
+ .debug_frame   0x00000088       0x30 main.o
+ .debug_frame   0x000000b8       0xc4 uart.o

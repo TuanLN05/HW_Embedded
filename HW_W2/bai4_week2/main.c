@@ -1,0 +1,12 @@
+#include "stm32f1xx.h"
+#include "clock.h"
+#include "pwm.h"
+
+int main(void)
+{   
+    PWM_TIM2_Init();
+    while (1)
+    {
+
+    }
+}
