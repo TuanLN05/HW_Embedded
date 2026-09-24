@@ -275,15 +275,15 @@ LOAD linker stubs
  .debug_line    0x000000000000036b      0x8f0 Build/Inc/uart/uart.o
  .debug_line    0x0000000000000c5b      0x1d5 Build/src/system_stm32f1xx.o
 
-.debug_str      0x0000000000000000     0x3f96
- .debug_str     0x0000000000000000     0x3b64 Build/src/main.o
-                                       0x3cc7 (size before relaxing)
- .debug_str     0x0000000000003b64      0x13c Build/Inc/pwm/pwm.o
-                                       0x3d9a (size before relaxing)
- .debug_str     0x0000000000003ca0      0x214 Build/Inc/uart/uart.o
-                                       0x3f89 (size before relaxing)
- .debug_str     0x0000000000003eb4       0xe2 Build/src/system_stm32f1xx.o
-                                       0x3d80 (size before relaxing)
+.debug_str      0x0000000000000000     0x3fa6
+ .debug_str     0x0000000000000000     0x3b74 Build/src/main.o
+                                       0x3cd7 (size before relaxing)
+ .debug_str     0x0000000000003b74      0x13c Build/Inc/pwm/pwm.o
+                                       0x3daa (size before relaxing)
+ .debug_str     0x0000000000003cb0      0x214 Build/Inc/uart/uart.o
+                                       0x3f99 (size before relaxing)
+ .debug_str     0x0000000000003ec4       0xe2 Build/src/system_stm32f1xx.o
+                                       0x3d90 (size before relaxing)
 
 .debug_frame    0x0000000000000000      0x1b0
  .debug_frame   0x0000000000000000       0x44 Build/src/main.o
