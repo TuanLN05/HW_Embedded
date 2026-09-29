@@ -12,7 +12,8 @@ C_SOURCES := src/main.c \
              Inc/ADC/adc.c \
              Inc/UART/uart.c \
 			 Inc/TIMER/timer.c \
-			 Inc/DMA/dma.c\
+			 Inc/DMA/dma.c \
+			 Inc/PWM/pwm.c \
              src/system_stm32f1xx.c
 STARTUP   := src/startup_stm32f103xb.s
 OBJECTS   := $(patsubst %.c,$(BUILD_DIR)/%.o,$(C_SOURCES)) \
@@ -20,7 +21,7 @@ OBJECTS   := $(patsubst %.c,$(BUILD_DIR)/%.o,$(C_SOURCES)) \
 DEPS      := $(patsubst %.c,$(BUILD_DIR)/%.d,$(C_SOURCES))
 
 CPUFLAGS := -mcpu=cortex-m3 -mthumb
-INCLUDES := -IInc -IInc/DMA -IInc/UART -IInc/TIMER -IINC/ADC
+INCLUDES := -IInc -IInc/DMA -IInc/UART -IInc/TIMER -IInc/ADC -IInc/PWM
 CFLAGS   := $(CPUFLAGS) -DSTM32F103xB $(INCLUDES) \
             -std=gnu11 -O2 -g3 -Wall -Wextra -ffreestanding \
             -ffunction-sections -fdata-sections -MMD -MP

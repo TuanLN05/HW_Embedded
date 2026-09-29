@@ -1,42 +1,66 @@
 #include "adc.h"
 
+void adc_delay(volatile uint32_t count)
+{
+    while (count > 0U)
+        count--;
+}
+
 void adc1_init(uint8_t channel)
 {
-    RCC->APB2ENR |= 1 << 9; // Enable ADC1 clock
+    /* PCLK2 = 72 MHz, ADC clock = PCLK2 / 6 = 12 MHz. */
+    RCC->CFGR = (RCC->CFGR & ~RCC_CFGR_ADCPRE) |
+                RCC_CFGR_ADCPRE_DIV6;
+    RCC->APB2ENR |= RCC_APB2ENR_IOPBEN | RCC_APB2ENR_ADC1EN;
 
-    ADC1 -> CR1 |= ADC_CR1_EOCIE; // Enable end of conversion interrupt
-    ADC1 -> CR2 |= ADC_CR2_ADON; // Enable ADC1
-    
-    ADC1 -> SQR1 &= ~(0xF << 20);
-    ADC1 -> SQR3 = channel;
+    /* PB0 is ADC1 channel 8: analog input (MODE = 00, CNF = 00). */
+    GPIOB->CRL &= ~(0xFUL << 0);
 
-    if(channel < 10)
+    ADC1->CR1 = 0U;
+    ADC1->CR2 = 0U;
+
+    ADC1->SQR1 &= ~ADC_SQR1_L; /* One regular conversion. */
+    ADC1->SQR3 = channel;      /* First conversion = selected channel. */
+
+    if (channel <= 9U)
     {
-        ADC1 -> SMPR2 |= (0x7 << (channel * 3)); // Set sample time for channel
+        ADC1->SMPR2 &= ~(7UL << (channel * 3U));
+        ADC1->SMPR2 |=  (7UL << (channel * 3U));
     }
     else
     {
-        ADC1 -> SMPR1 |= (0x7 << ((channel - 10) * 3)); // Set sample time for channel
+        uint8_t offset = channel - 10U;
+        ADC1->SMPR1 &= ~(7UL << (offset * 3U));
+        ADC1->SMPR1 |=  (7UL << (offset * 3U));
     }
-    ADC1 -> CR2 &= ~(7 << 17);
-    ADC1 -> CR2 |= 7 << 17;
-    ADC1 -> CR2 |= 1 << 20;
 
-    for(int i = 0; i < 10000; i++); // Delay for ADC stabilization
-    ADC1 -> CR2 |= ADC_CR2_ADON; // Start ADC1
-    for(int i = 0; i < 1000; i++); // Delay for ADC stabilization
+    /* Regular conversion starts on the internal TIM1_CC1 event. */
+    ADC1->CR2 &= ~ADC_CR2_EXTSEL;
+    ADC1->CR2 |= ADC_CR2_EXTSEL_TIM1_CC1 | ADC_CR2_EXTTRIG;
 
-    ADC1 -> CR2 |= 1 << 3;
-    while(ADC1 -> CR2 & (1 << 3)); // Wait for calibration to complete
+    adc_delay(10000U);
 
-    ADC1 -> CR2 |= 1 << 2;
-    while(ADC1 -> CR2 & (1 << 2)); // Wait for calibration to complete
+    ADC1->CR2 |= ADC_CR2_ADON;
+    adc_delay(1000U);
+
+    ADC1->CR2 |= ADC_CR2_RSTCAL;
+    while ((ADC1->CR2 & ADC_CR2_RSTCAL) != 0U)
+        ;
+
+    ADC1->CR2 |= ADC_CR2_CAL;
+    while ((ADC1->CR2 & ADC_CR2_CAL) != 0U)
+        ;
 }
 
-uint16_t adc1_read(ADC_TypeDef *ADCx)
+uint16_t adc1_read(void)
 {
-    ADCx -> SR = 0;
-    ADCx -> CR2 |= 1 << 22; // Start conversion
-    while(!(ADCx -> SR & (1 << 1))); // Wait for conversion to complete
-    return ADCx -> DR; // Return the converted value
+    ADC1->SR = 0U;
+    ADC1->CR2 = (ADC1->CR2 & ~ADC_CR2_EXTSEL) |
+                ADC_CR2_EXTSEL_SWSTART | ADC_CR2_EXTTRIG;
+    ADC1->CR2 |= ADC_CR2_SWSTART;
+
+    while ((ADC1->SR & ADC_SR_EOC) == 0U)
+        ;
+
+    return (uint16_t)ADC1->DR;
 }

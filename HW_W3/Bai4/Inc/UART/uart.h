@@ -1,11 +1,12 @@
-#ifndef UART_H
-#define UART_H
+#ifndef uart_H
+#define uart_H
 
 #include "stm32f103xb.h"
-#include <stdint.h>
 
+void USART1_IRQHandler(void);
 void uart_config(void);
 void uartWrite(uint8_t c);
 void uartWriteString(const char *str);
-void uartProcessResponses(void);
+uint8_t uartRead(void);
+
 #endif

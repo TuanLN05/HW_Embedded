@@ -12,6 +12,7 @@
 .extern _edata
 .extern _sbss
 .extern _ebss
+.extern DMA1_Channel1_IRQHandler
 .extern USART1_IRQHandler
 
 .section .isr_vector, "a", %progbits
@@ -31,7 +32,11 @@
 .word Default_Handler
 .word Default_Handler
 .word Default_Handler
-.rept 37
+.rept 11
+.word Default_Handler
+.endr
+.word DMA1_Channel1_IRQHandler
+.rept 25
 .word Default_Handler
 .endr
 .word USART1_IRQHandler
