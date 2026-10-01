@@ -36,7 +36,7 @@
 .word Default_Handler
 .endr
 .word DMA1_Channel1_IRQHandler
-.rept 25
+.rept 37
 .word Default_Handler
 .endr
 .word USART1_IRQHandler
