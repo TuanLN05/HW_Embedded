@@ -1,0 +1,333 @@
+
+Discarded input sections
+
+ .group         0x00000000        0xc main.o
+ .group         0x00000000        0xc main.o
+ .group         0x00000000        0xc main.o
+ .group         0x00000000        0xc main.o
+ .group         0x00000000        0xc main.o
+ .group         0x00000000        0xc main.o
+ .group         0x00000000        0xc main.o
+ .group         0x00000000        0xc main.o
+ .group         0x00000000        0xc main.o
+ .group         0x00000000        0xc main.o
+ .text          0x00000000        0x0 main.o
+ .data          0x00000000        0x0 main.o
+ .bss           0x00000000        0x0 main.o
+ .group         0x00000000        0xc max7219.o
+ .group         0x00000000        0xc max7219.o
+ .group         0x00000000        0xc max7219.o
+ .group         0x00000000        0xc max7219.o
+ .group         0x00000000        0xc max7219.o
+ .group         0x00000000        0xc max7219.o
+ .group         0x00000000        0xc max7219.o
+ .group         0x00000000        0xc max7219.o
+ .group         0x00000000        0xc max7219.o
+ .group         0x00000000        0xc max7219.o
+ .text          0x00000000        0x0 max7219.o
+ .data          0x00000000        0x0 max7219.o
+ .bss           0x00000000        0x0 max7219.o
+ .debug_macro   0x00000000      0xac6 max7219.o
+ .debug_macro   0x00000000       0x2e max7219.o
+ .debug_macro   0x00000000       0x22 max7219.o
+ .debug_macro   0x00000000      0x34e max7219.o
+ .debug_macro   0x00000000       0x1c max7219.o
+ .debug_macro   0x00000000       0x22 max7219.o
+ .debug_macro   0x00000000       0xbd max7219.o
+ .debug_macro   0x00000000      0xd23 max7219.o
+ .debug_macro   0x00000000     0xe09e max7219.o
+ .debug_macro   0x00000000       0x6d max7219.o
+ .group         0x00000000        0xc spi.o
+ .group         0x00000000        0xc spi.o
+ .group         0x00000000        0xc spi.o
+ .group         0x00000000        0xc spi.o
+ .group         0x00000000        0xc spi.o
+ .group         0x00000000        0xc spi.o
+ .group         0x00000000        0xc spi.o
+ .group         0x00000000        0xc spi.o
+ .group         0x00000000        0xc spi.o
+ .group         0x00000000        0xc spi.o
+ .text          0x00000000        0x0 spi.o
+ .data          0x00000000        0x0 spi.o
+ .bss           0x00000000        0x0 spi.o
+ .debug_macro   0x00000000      0xac6 spi.o
+ .debug_macro   0x00000000       0x2e spi.o
+ .debug_macro   0x00000000       0x22 spi.o
+ .debug_macro   0x00000000      0x34e spi.o
+ .debug_macro   0x00000000       0x1c spi.o
+ .debug_macro   0x00000000       0x22 spi.o
+ .debug_macro   0x00000000       0xbd spi.o
+ .debug_macro   0x00000000      0xd23 spi.o
+ .debug_macro   0x00000000     0xe09e spi.o
+ .debug_macro   0x00000000       0x6d spi.o
+ .group         0x00000000        0xc clock.o
+ .group         0x00000000        0xc clock.o
+ .group         0x00000000        0xc clock.o
+ .group         0x00000000        0xc clock.o
+ .group         0x00000000        0xc clock.o
+ .group         0x00000000        0xc clock.o
+ .group         0x00000000        0xc clock.o
+ .group         0x00000000        0xc clock.o
+ .group         0x00000000        0xc clock.o
+ .group         0x00000000        0xc clock.o
+ .text          0x00000000        0x0 clock.o
+ .data          0x00000000        0x0 clock.o
+ .bss           0x00000000        0x0 clock.o
+ .text.Clock_Init_72MHz
+                0x00000000       0xf8 clock.o
+ .debug_info    0x00000000      0x19c clock.o
+ .debug_abbrev  0x00000000       0xa3 clock.o
+ .debug_aranges
+                0x00000000       0x20 clock.o
+ .debug_rnglists
+                0x00000000       0x14 clock.o
+ .debug_macro   0x00000000       0x7d clock.o
+ .debug_macro   0x00000000      0xac6 clock.o
+ .debug_macro   0x00000000       0x2e clock.o
+ .debug_macro   0x00000000       0x22 clock.o
+ .debug_macro   0x00000000      0x34e clock.o
+ .debug_macro   0x00000000       0x1c clock.o
+ .debug_macro   0x00000000       0x22 clock.o
+ .debug_macro   0x00000000       0xbd clock.o
+ .debug_macro   0x00000000      0xd23 clock.o
+ .debug_macro   0x00000000     0xe09e clock.o
+ .debug_macro   0x00000000       0x6d clock.o
+ .debug_line    0x00000000      0x22a clock.o
+ .debug_str     0x00000000    0x54266 clock.o
+ .comment       0x00000000       0x27 clock.o
+ .debug_frame   0x00000000       0x30 clock.o
+ .ARM.attributes
+                0x00000000       0x2d clock.o
+ .text          0x00000000        0x0 startup.o
+ .data          0x00000000        0x0 startup.o
+ .bss           0x00000000        0x0 startup.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x08000000         0x00010000         xr
+RAM              0x20000000         0x00005000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD main.o
+LOAD max7219.o
+LOAD spi.o
+LOAD clock.o
+LOAD startup.o
+                0x20005000                        _estack = (ORIGIN (RAM) + LENGTH (RAM))
+
+.isr_vector     0x08000000       0xec
+                0x08000000                        . = ALIGN (0x4)
+ *(.isr_vector)
+ .isr_vector    0x08000000       0xec startup.o
+                0x080000ec                        . = ALIGN (0x4)
+
+.text           0x080000ec      0x2a8
+                0x080000ec                        . = ALIGN (0x4)
+ *(.text)
+ *(.text*)
+ .text.main     0x080000ec       0x2c main.o
+                0x080000ec                main
+ .text.MAX7219_Write
+                0x08000118       0x38 max7219.o
+                0x08000118                MAX7219_Write
+ .text.MAX7219_Clear
+                0x08000150       0x2c max7219.o
+                0x08000150                MAX7219_Clear
+ .text.MAX7219_Init
+                0x0800017c       0x34 max7219.o
+                0x0800017c                MAX7219_Init
+ .text.MAX7219_Display
+                0x080001b0       0x38 max7219.o
+                0x080001b0                MAX7219_Display
+ .text.SPI1_Init
+                0x080001e8      0x108 spi.o
+                0x080001e8                SPI1_Init
+ .text.SPI1_SendByte
+                0x080002f0       0x58 spi.o
+                0x080002f0                SPI1_SendByte
+ .text.Reset_Handler
+                0x08000348       0x40 startup.o
+                0x08000348                Reset_Handler
+ .text.Default_Handler
+                0x08000388        0x4 startup.o
+                0x08000388                EXTI2_IRQHandler
+                0x08000388                DebugMon_Handler
+                0x08000388                TIM1_CC_IRQHandler
+                0x08000388                HardFault_Handler
+                0x08000388                SysTick_Handler
+                0x08000388                PVD_IRQHandler
+                0x08000388                PendSV_Handler
+                0x08000388                NMI_Handler
+                0x08000388                EXTI3_IRQHandler
+                0x08000388                EXTI0_IRQHandler
+                0x08000388                I2C2_EV_IRQHandler
+                0x08000388                UsageFault_Handler
+                0x08000388                ADC1_2_IRQHandler
+                0x08000388                SPI1_IRQHandler
+                0x08000388                TAMPER_IRQHandler
+                0x08000388                DMA1_Channel4_IRQHandler
+                0x08000388                USART3_IRQHandler
+                0x08000388                RTC_IRQHandler
+                0x08000388                DMA1_Channel7_IRQHandler
+                0x08000388                CAN1_RX1_IRQHandler
+                0x08000388                TIM4_IRQHandler
+                0x08000388                I2C1_EV_IRQHandler
+                0x08000388                DMA1_Channel6_IRQHandler
+                0x08000388                TIM3_IRQHandler
+                0x08000388                RCC_IRQHandler
+                0x08000388                TIM1_TRG_COM_IRQHandler
+                0x08000388                DMA1_Channel1_IRQHandler
+                0x08000388                Default_Handler
+                0x08000388                EXTI15_10_IRQHandler
+                0x08000388                EXTI9_5_IRQHandler
+                0x08000388                SPI2_IRQHandler
+                0x08000388                MemManage_Handler
+                0x08000388                SVC_Handler
+                0x08000388                DMA1_Channel5_IRQHandler
+                0x08000388                EXTI4_IRQHandler
+                0x08000388                USB_LP_CAN1_RX0_IRQHandler
+                0x08000388                USB_HP_CAN1_TX_IRQHandler
+                0x08000388                DMA1_Channel3_IRQHandler
+                0x08000388                TIM1_UP_IRQHandler
+                0x08000388                WWDG_IRQHandler
+                0x08000388                TIM2_IRQHandler
+                0x08000388                TIM1_BRK_IRQHandler
+                0x08000388                EXTI1_IRQHandler
+                0x08000388                RTCAlarm_IRQHandler
+                0x08000388                USART2_IRQHandler
+                0x08000388                I2C2_ER_IRQHandler
+                0x08000388                DMA1_Channel2_IRQHandler
+                0x08000388                CAN1_SCE_IRQHandler
+                0x08000388                FLASH_IRQHandler
+                0x08000388                BusFault_Handler
+                0x08000388                USART1_IRQHandler
+                0x08000388                I2C1_ER_IRQHandler
+                0x08000388                USBWakeUp_IRQHandler
+ *(.rodata)
+ .rodata        0x0800038c        0x8 main.o
+ *(.rodata*)
+                0x08000394                        . = ALIGN (0x4)
+                0x08000394                        _etext = .
+                0x08000394                        _sidata = LOADADDR (.data)
+
+.glue_7         0x08000394        0x0
+ .glue_7        0x08000394        0x0 linker stubs
+
+.glue_7t        0x08000394        0x0
+ .glue_7t       0x08000394        0x0 linker stubs
+
+.vfp11_veneer   0x08000394        0x0
+ .vfp11_veneer  0x08000394        0x0 linker stubs
+
+.v4_bx          0x08000394        0x0
+ .v4_bx         0x08000394        0x0 linker stubs
+
+.iplt           0x08000394        0x0
+ .iplt          0x08000394        0x0 main.o
+
+.rel.dyn        0x08000394        0x0
+ .rel.iplt      0x08000394        0x0 main.o
+
+.data           0x20000000        0x0 load address 0x08000394
+                0x20000000                        . = ALIGN (0x4)
+                0x20000000                        _sdata = .
+ *(.data)
+ *(.data*)
+                0x20000000                        . = ALIGN (0x4)
+                0x20000000                        _edata = .
+
+.igot.plt       0x20000000        0x0 load address 0x08000394
+ .igot.plt      0x20000000        0x0 main.o
+
+.bss            0x20000000        0x0 load address 0x08000394
+                0x20000000                        . = ALIGN (0x4)
+                0x20000000                        _sbss = .
+ *(.bss)
+ *(.bss*)
+ *(COMMON)
+                0x20000000                        . = ALIGN (0x4)
+                0x20000000                        _ebss = .
+OUTPUT(bai2_week3.elf elf32-littlearm)
+LOAD linker stubs
+
+.debug_info     0x00000000      0x4b3
+ .debug_info    0x00000000       0xd7 main.o
+ .debug_info    0x000000d7      0x19f max7219.o
+ .debug_info    0x00000276      0x23d spi.o
+
+.debug_abbrev   0x00000000      0x2b4
+ .debug_abbrev  0x00000000       0xb3 main.o
+ .debug_abbrev  0x000000b3      0x120 max7219.o
+ .debug_abbrev  0x000001d3       0xe1 spi.o
+
+.debug_aranges  0x00000000       0x80
+ .debug_aranges
+                0x00000000       0x20 main.o
+ .debug_aranges
+                0x00000020       0x38 max7219.o
+ .debug_aranges
+                0x00000058       0x28 spi.o
+
+.debug_rnglists
+                0x00000000       0x52
+ .debug_rnglists
+                0x00000000       0x13 main.o
+ .debug_rnglists
+                0x00000013       0x25 max7219.o
+ .debug_rnglists
+                0x00000038       0x1a spi.o
+
+.debug_macro    0x00000000     0xff18
+ .debug_macro   0x00000000       0x87 main.o
+ .debug_macro   0x00000087      0xac6 main.o
+ .debug_macro   0x00000b4d       0x2e main.o
+ .debug_macro   0x00000b7b       0x22 main.o
+ .debug_macro   0x00000b9d      0x34e main.o
+ .debug_macro   0x00000eeb       0x1c main.o
+ .debug_macro   0x00000f07       0x22 main.o
+ .debug_macro   0x00000f29       0xbd main.o
+ .debug_macro   0x00000fe6      0xd23 main.o
+ .debug_macro   0x00001d09     0xe09e main.o
+ .debug_macro   0x0000fda7       0x6d main.o
+ .debug_macro   0x0000fe14       0x87 max7219.o
+ .debug_macro   0x0000fe9b       0x7d spi.o
+
+.debug_line     0x00000000      0x5c7
+ .debug_line    0x00000000      0x17d main.o
+ .debug_line    0x0000017d      0x1fe max7219.o
+ .debug_line    0x0000037b      0x24c spi.o
+
+.debug_str      0x00000000    0x540b5
+ .debug_str     0x00000000    0x540b5 main.o
+                              0x54208 (size before relaxing)
+ .debug_str     0x000540b5        0x0 max7219.o
+                              0x54253 (size before relaxing)
+ .debug_str     0x000540b5        0x0 spi.o
+                              0x54279 (size before relaxing)
+
+.comment        0x00000000       0x26
+ .comment       0x00000000       0x26 main.o
+                                 0x27 (size before relaxing)
+ .comment       0x00000026        0x0 max7219.o
+                                 0x27 (size before relaxing)
+ .comment       0x00000026        0x0 spi.o
+                                 0x27 (size before relaxing)
+
+.ARM.attributes
+                0x00000000       0x2b
+ .ARM.attributes
+                0x00000000       0x2d main.o
+ .ARM.attributes
+                0x0000002d       0x2d max7219.o
+ .ARM.attributes
+                0x0000005a       0x2d spi.o
+ .ARM.attributes
+                0x00000087       0x21 startup.o
+
+.debug_frame    0x00000000      0x120
+ .debug_frame   0x00000000       0x30 main.o
+ .debug_frame   0x00000030       0x98 max7219.o
+ .debug_frame   0x000000c8       0x58 spi.o
