@@ -2,6 +2,7 @@
 #include "pwm.h"
 #include "gpio.h"
 
+#ifdef pwm_debug
 void vTask_LedSine(void *pvParameters)
 {
     const TickType_t period_ticks = pdMS_TO_TICKS(4000U);
@@ -21,7 +22,8 @@ void vTask_LedSine(void *pvParameters)
         xTaskDelayUntil(&last_wake_tick, update_ticks);
     }
 }
-
+#endif
+#ifdef freeRTOS_debug
 void vTask_0_1Hz(void *pvParameters)
 {
     (void)pvParameters;
@@ -55,5 +57,19 @@ void vTask_10Hz(void *pvParameters)
         vTaskDelay(pdMS_TO_TICKS(50));
         GPIO_PinReset(GPIOA, 2);
         vTaskDelay(pdMS_TO_TICKS(50));
+    }
+}
+#endif
+
+
+void vTask_blink(void *pvParameters)
+{
+    BlinkTaskParams params = *(BlinkTaskParams *)pvParameters;
+    for (;;)
+    {
+        GPIO_PinSet(GPIOA, params.Pin);
+        vTaskDelay(pdMS_TO_TICKS(params.time));
+        GPIO_PinReset(GPIOA, params.Pin);
+        vTaskDelay(pdMS_TO_TICKS(params.time));
     }
 }
